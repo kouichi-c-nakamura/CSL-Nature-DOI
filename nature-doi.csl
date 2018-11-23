@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="en-GB">
+  <!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
   <info>
     <title>Nature DOI</title>
     <id>http://www.zotero.org/styles/nature-doi</id>
-    <link href="http://www.zotero.org/styles/nature" rel="self"/>
+    <link href="http://www.zotero.org/styles/nature-doi" rel="self"/>
     <link href="http://www.nature.com/nature/authors/gta/index.html#a5.4" rel="documentation"/>
     <link href="http://www.nature.com/srep/publish/guidelines#references" rel="documentation"/>
     <author>
@@ -20,7 +21,7 @@
     <issn>0028-0836</issn>
     <eissn>1476-4687</eissn>
     <summary>Nature style with doi</summary>
-    <updated>2018-10-24T18:43:45+00:00</updated>
+    <updated>2018-11-23T07:12:27+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <macro name="title">
@@ -42,17 +43,17 @@
   </macro>
   <macro name="access">
     <choose>
-        <if variable="DOI">
-          <text value="https://doi.org/" prefix=", "/>
-          <text variable="DOI"/>
-        </if>
-        <else-if match="any" variable="PMID">
-          <text value="https://www.ncbi.nlm.nih.gov/pubmed/" prefix=", "/>
-          <text variable="PMID"/>
-        </else-if>
-        <else-if match="any" variable="URL">
-          <text variable="URL" prefix=", "/>
-        </else-if>
+      <if variable="DOI">
+        <text value="https://doi.org/"/>
+        <text variable="DOI"/>
+      </if>
+      <else-if match="any" variable="PMID">
+        <text value="https://www.ncbi.nlm.nih.gov/pubmed/"/>
+        <text variable="PMID"/>
+      </else-if>
+      <else-if match="any" variable="URL">
+        <text variable="URL"/>
+      </else-if>
     </choose>
   </macro>
   <macro name="issuance">
