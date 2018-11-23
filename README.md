@@ -21,7 +21,7 @@ The style is useful in written communication, such as emails.
 
 3.Nakamura, K. C., Sharott, A. & Magill, P. J. Temporal coupling with cortex distinguishes spontaneous neuronal activities in identified basal ganglia-recipient and cerebellar-recipient zones of the motor thalamus. Cereb. Cortex 24, 81–97 (2014). https://doi.org/10.1093/cercor/bhs287
 
-Note that the numbers are formatted with rich text and may not suitable in plain text.
+Note that the numbers are formatted with rich text and may not be suitable in plain text (eg. the lack of space between the numbers and the authors).
 
 # See also
 
