@@ -101,25 +101,25 @@
       </else-if>
       <else-if type="report webpage post post-weblog" match="any">
         <group delimiter=" ">
-          <text variable="URL"/>
           <date date-parts="year" form="text" variable="issued" prefix="(" suffix=")"/>
+          <text variable="URL"/>
         </group>
       </else-if>
       <else>
-        <choose>
-            <if variable="DOI" match="any">
-              <text variable="DOI" prefix="https://doi.org/" suffix=" "/>
-            </if>
-            <else-if match="any" variable="PMID">
-              <text variable="PMID" prefix="https://www.ncbi.nlm.nih.gov/pubmed/" suffix=" "/>
-            </else-if>
-            <else-if match="any" variable="URL">
-              <text variable="URL" suffix=" "/>
-            </else-if>
-          </choose>
-        <date variable="issued" prefix="(" suffix=")">
+        <date variable="issued" prefix="(" suffix=") ">
           <date-part name="year"/>
         </date>
+        <choose>
+            <if variable="DOI" match="any">
+              <text variable="DOI" prefix="https://doi.org/"/>
+            </if>
+            <else-if match="any" variable="PMID">
+              <text variable="PMID" prefix="https://www.ncbi.nlm.nih.gov/pubmed/"/>
+            </else-if>
+            <else-if match="any" variable="URL">
+              <text variable="URL"/>
+            </else-if>
+          </choose>
       </else>
     </choose>
   </macro>
